@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-server
+spec:
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}-server
+  replicas: {{.Values.replicaCount}}
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}-server
+    spec:
+      containers:
+      - name: {{ .Release.Name }}-server
+        image: {{ .Values.container.image }}
+        env:
+            - name: "DATABASE_URL"
+              value: "mongodb://mongo-mongodb-0.mongo-mongodb-headless.default.svc.cluster.local:27017,mongo-mongodb-1.mongo-mongodb-headless.default.svc.cluster.local:27017/book?replicaSet=rs0"  
+              #
+        ports:
+        - containerPort: 8080
+        resources:
+          limits:
+            memory: "2Gi"
+            cpu: "100m"

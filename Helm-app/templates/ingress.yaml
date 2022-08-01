@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+  name: {{ .Release.Name }}
+  labels:
+    name: {{ .Release.Name }}-ingress
+spec:
+  rules:
+  - host: 194-195-247-170.ip.linodeusercontent.com
+    http:
+      paths:
+      - path: "/"
+        pathType: Prefix
+        backend:
+          service:
+            name: {{ .Release.Name }}-service
+            port: 
+              number: 80

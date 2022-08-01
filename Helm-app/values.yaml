@@ -1,0 +1,3 @@
+container:
+  image: lysetskyiv/microapp:v1
+replicaCount : 2

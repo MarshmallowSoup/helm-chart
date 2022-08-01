@@ -1,0 +1,6 @@
+apps:
+  - script   : 'src/server.js'
+    name     : 'bookshop-api'
+    exec_mode: 'cluster'
+    instances: 2
+    watch    : false

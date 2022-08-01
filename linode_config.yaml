@@ -1,0 +1,8 @@
+architecture: replicaset
+replicaCount: 2
+podAntiAffinityPreset: hard
+persistence:
+    storageClass: "linode-block-storage"
+auth:
+  enabled: false
+  
