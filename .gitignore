@@ -1,2 +1,7 @@
 node_modules
 mongo
+.terraform
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
+.secret

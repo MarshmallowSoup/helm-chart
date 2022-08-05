@@ -1,0 +1,8 @@
+architecture: replicaset
+replicaCount: 2
+#podAntiAffinityPreset: hard
+#persistence:
+ #   size: "2Gi"
+auth:
+  enabled: false
+  

@@ -8,7 +8,7 @@ metadata:
     name: {{ .Release.Name }}-ingress
 spec:
   rules:
-  - host: 194-195-247-170.ip.linodeusercontent.com
+  - host:
     http:
       paths:
       - path: "/"
