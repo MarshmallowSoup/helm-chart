@@ -5,3 +5,4 @@ mongo
 terraform.tfstate
 terraform.tfstate.backup
 .secret
+az_terraform/.terraform/providers/registry.terraform.io/hashicorp/azurerm/3.17.0/linux_amd64/terraform-provider-azurerm_v3.17.0_x5
