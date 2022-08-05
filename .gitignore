@@ -1,6 +1,6 @@
 node_modules
 mongo
-/.terraform
+.terraform
 .terraform.lock.hcl
 terraform.tfstate
 terraform.tfstate.backup
